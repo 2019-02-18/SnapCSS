@@ -1,0 +1,120 @@
+{
+  "extName": {
+    "message": "SnapCSS"
+  },
+  "extDescription": {
+    "message": "悬停任意元素，即时查看 CSS 样式，一键复制。"
+  },
+  "popupTagline": {
+    "message": "悬停 · 查看 · 复制"
+  },
+  "startInspecting": {
+    "message": "开始检查"
+  },
+  "stopInspecting": {
+    "message": "停止检查"
+  },
+  "shortcutHint": {
+    "message": "$key1$ + $key2$ 切换检查模式",
+    "placeholders": {
+      "key1": { "content": "Alt" },
+      "key2": { "content": "C" }
+    }
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "settingsTitle": {
+    "message": "SnapCSS 设置"
+  },
+  "copyFormat": {
+    "message": "复制格式"
+  },
+  "formatCSS": {
+    "message": "标准 CSS"
+  },
+  "formatCSSVars": {
+    "message": "CSS 变量"
+  },
+  "formatMinified": {
+    "message": "压缩单行"
+  },
+  "theme": {
+    "message": "主题"
+  },
+  "themeSystem": {
+    "message": "跟随系统"
+  },
+  "themeLight": {
+    "message": "浅色"
+  },
+  "themeDark": {
+    "message": "深色"
+  },
+  "settingsSaved": {
+    "message": "设置已保存"
+  },
+  "contextMenuInspect": {
+    "message": "用 SnapCSS 检查"
+  },
+  "toggleInspectDesc": {
+    "message": "切换 SnapCSS 检查模式"
+  },
+  "copied": {
+    "message": "已复制！"
+  },
+  "panelFontInfo": {
+    "message": "字体"
+  },
+  "panelSize": {
+    "message": "尺寸"
+  },
+  "panelStyles": {
+    "message": "样式"
+  },
+  "panelComputed": {
+    "message": "计算值"
+  },
+  "panelCopyAll": {
+    "message": "复制全部 CSS"
+  },
+  "shortcutKey": {
+    "message": "快捷键"
+  },
+  "shortcutKeyDesc": {
+    "message": "当前快捷键：Alt + C。你可以在 Chrome 扩展快捷键设置中自定义。"
+  },
+  "shortcutKeyChange": {
+    "message": "修改快捷键 →"
+  },
+  "shortcutHintLabel": {
+    "message": "快捷键："
+  },
+  "panelLocked": {
+    "message": "面板已锁定"
+  },
+  "maxPanelsReached": {
+    "message": "已达最大锁定数量"
+  },
+  "hintLock": {
+    "message": "锁定"
+  },
+  "hintPause": {
+    "message": "暂停"
+  },
+  "hintNav": {
+    "message": "导航"
+  },
+  "language": {
+    "message": "语言"
+  },
+  "langAuto": {
+    "message": "跟随系统"
+  },
+  "langEn": {
+    "message": "English"
+  },
+  "langZh": {
+    "message": "中文"
+  }
+}

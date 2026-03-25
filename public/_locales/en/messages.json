@@ -1,0 +1,120 @@
+{
+  "extName": {
+    "message": "SnapCSS"
+  },
+  "extDescription": {
+    "message": "Hover any element, instantly see its CSS, one-click copy."
+  },
+  "popupTagline": {
+    "message": "Hover. See. Copy."
+  },
+  "startInspecting": {
+    "message": "Start Inspecting"
+  },
+  "stopInspecting": {
+    "message": "Stop Inspecting"
+  },
+  "shortcutHint": {
+    "message": "$key1$ + $key2$ to toggle",
+    "placeholders": {
+      "key1": { "content": "Alt" },
+      "key2": { "content": "C" }
+    }
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "settingsTitle": {
+    "message": "SnapCSS Settings"
+  },
+  "copyFormat": {
+    "message": "Copy Format"
+  },
+  "formatCSS": {
+    "message": "Standard CSS"
+  },
+  "formatCSSVars": {
+    "message": "CSS Variables"
+  },
+  "formatMinified": {
+    "message": "Minified"
+  },
+  "theme": {
+    "message": "Theme"
+  },
+  "themeSystem": {
+    "message": "System Default"
+  },
+  "themeLight": {
+    "message": "Light"
+  },
+  "themeDark": {
+    "message": "Dark"
+  },
+  "settingsSaved": {
+    "message": "Settings saved"
+  },
+  "contextMenuInspect": {
+    "message": "Inspect with SnapCSS"
+  },
+  "toggleInspectDesc": {
+    "message": "Toggle SnapCSS inspect mode"
+  },
+  "copied": {
+    "message": "Copied!"
+  },
+  "panelFontInfo": {
+    "message": "Font"
+  },
+  "panelSize": {
+    "message": "Size"
+  },
+  "panelStyles": {
+    "message": "Styles"
+  },
+  "panelComputed": {
+    "message": "Computed"
+  },
+  "panelCopyAll": {
+    "message": "Copy All CSS"
+  },
+  "shortcutKey": {
+    "message": "Shortcut Key"
+  },
+  "shortcutKeyDesc": {
+    "message": "Current shortcut: Alt + C. You can customize it in Chrome's extension shortcuts settings."
+  },
+  "shortcutKeyChange": {
+    "message": "Change Shortcut →"
+  },
+  "shortcutHintLabel": {
+    "message": "Shortcut:"
+  },
+  "panelLocked": {
+    "message": "Panel locked"
+  },
+  "maxPanelsReached": {
+    "message": "Max pinned panels reached"
+  },
+  "hintLock": {
+    "message": "Lock"
+  },
+  "hintPause": {
+    "message": "Pause"
+  },
+  "hintNav": {
+    "message": "Navigate"
+  },
+  "language": {
+    "message": "Language"
+  },
+  "langAuto": {
+    "message": "System Default"
+  },
+  "langEn": {
+    "message": "English"
+  },
+  "langZh": {
+    "message": "中文"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>Icon Generator</title></head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+const sizes = [16, 32, 48, 128];
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+sizes.forEach(size => {
+  canvas.width = size;
+  canvas.height = size;
+
+  const r = size * 0.15;
+  const pad = size * 0.05;
+
+  ctx.clearRect(0, 0, size, size);
+
+  ctx.beginPath();
+  ctx.roundRect(pad, pad, size - pad * 2, size - pad * 2, r);
+  ctx.fillStyle = '#6366f1';
+  ctx.fill();
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold ${size * 0.45}px "Courier New", monospace`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('{ }', size / 2, size / 2);
+
+  const link = document.createElement('a');
+  link.download = `icon-${size}.png`;
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+});
+</script>
+</body>
+</html>

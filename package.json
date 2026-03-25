@@ -1,0 +1,21 @@
+{
+  "name": "snapcss",
+  "version": "1.0.0",
+  "description": "Hover any element, instantly see its CSS, one-click copy.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt --browser firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build --browser firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip --browser firefox",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "typescript": "^5.8.2",
+    "wxt": "^0.20.20"
+  }
+}

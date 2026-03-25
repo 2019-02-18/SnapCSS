@@ -1,0 +1,100 @@
+---
+alwaysApply: false
+---
+# 项目：SnapCSS - Chrome 扩展
+
+## 你是谁
+你是一名资深 Chrome 扩展开发者，精通 Manifest V3、TypeScript、DOM API、CSS CSSOM。
+
+## 产品定位
+SnapCSS 是一款 Chrome 开发者工具扩展。核心价值：鼠标悬停网页任意元素，即时查看其 CSS 样式并一键复制，替代繁琐的 DevTools Inspect Element 流程。
+
+## 目标用户
+前端开发者、UI 设计师、独立开发者
+
+## 竞品参考
+CSS Scan（$69 付费）、CSS Peeper（$29）、CSSViewer（免费但功能弱）、SnipCSS（免费但体验粗糙）
+
+## 核心原则
+1. 纯前端实现，零后端依赖，离线可用
+2. AI 功能为可选增强（V2），用户自带 API key，不填也不影响任何基础功能
+3. 性能第一，悬停响应 <50ms，不能拖慢目标页面
+4. Manifest V3 规范，符合 Chrome Web Store 最新审核要求
+
+## V1 功能范围（MVP）
+### 必须实现
+- 点击扩展图标激活/关闭检查模式
+- 激活后鼠标悬停任意元素，实时高亮该元素边界（outline + 半透明遮罩）
+- 在元素旁弹出浮动面板，显示：
+  - 元素标签名 + class 名
+  - 元素尺寸（宽 x 高）
+  - 字体信息（font-family, font-size, font-weight, color）
+  - 完整 CSS 样式（经过清洗：去除浏览器默认样式、去除被覆盖的属性、保留原始单位 rem/em/%，不转 px）
+  - 伪类样式（:hover, :focus, :active, ::before, ::after）
+- 单击元素 → 一键复制其清洗后的完整 CSS 到剪贴板，显示 "Copied!" 提示
+- 按方向键 ↑↓ 在 DOM 树中导航（父元素/子元素/兄弟元素）
+- 按 Shift 暂停检查（鼠标可自由移动不触发高亮）
+- 按 Space 锁定当前面板（可同时显示多个锁定面板用于对比）
+- 右键菜单增加 "Inspect with SnapCSS" 入口
+- 浮动面板支持拖拽移动
+- 暗色/亮色主题跟随系统
+- 设置页面：可配置复制格式（纯 CSS / CSS 变量 / 压缩单行）
+
+### 明确不做（V1 排除）
+- AI 功能（V2）
+- Tailwind 转换（V2）
+- 设计师模式/页面扫描（V3）
+- 子元素批量复制（V2）
+- CodePen 导出（V2）
+- 实时编辑 CSS（V2）
+
+## 技术要求
+- Manifest V3（service worker，不用 background page）
+- TypeScript 编写
+- 构建工具：Vite + CRXJS 或 Plasmo 框架
+- Content Script 负责 DOM 检查和浮动面板渲染
+- 使用 window.getComputedStyle() 获取样式
+- CSS 清洗逻辑：对比目标元素与同标签空元素的 computed style，差异即为"有效样式"
+- 浮动面板用 Shadow DOM 隔离，避免被目标页面 CSS 影响
+- 不使用任何外部 CDN 或远程资源
+- 代码需通过 Chrome Web Store 审核（无 eval、无远程代码执行）
+
+## 项目结构
+snapcss/
+├── src/
+│   ├── manifest.ts          # Manifest V3 配置
+│   ├── background/
+│   │   └── service-worker.ts
+│   ├── content/
+│   │   ├── index.ts         # Content Script 入口
+│   │   ├── inspector.ts     # DOM 检查逻辑
+│   │   ├── panel.ts         # 浮动面板渲染
+│   │   ├── css-parser.ts    # CSS 提取与清洗
+│   │   └── styles.css       # 面板样式（注入 Shadow DOM）
+│   ├── popup/
+│   │   ├── index.html
+│   │   └── popup.ts         # 开关 + 快捷设置
+│   ├── options/
+│   │   ├── index.html
+│   │   └── options.ts       # 完整设置页
+│   └── utils/
+│       ├── copy.ts          # 剪贴板操作
+│       ├── dom.ts           # DOM 遍历工具
+│       └── theme.ts         # 主题切换
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+
+## 输出要求
+请基于以上信息生成完整的 PRD 开发文档，包含：
+1. 产品概述与目标
+2. 用户故事（User Stories）
+3. 详细功能规格（每个功能的交互流程、边界情况、错误处理）
+4. 技术架构设计
+5. API/接口设计（Content Script ↔ Service Worker 通信）
+6. 数据存储方案（chrome.storage）
+7. 性能要求与优化策略
+8. 测试计划
+9. V2/V3 路线图概要
+10. Chrome Web Store 上架准备（描述、截图要求、隐私政策）
