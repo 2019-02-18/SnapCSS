@@ -51,4 +51,4 @@ If we make changes to this privacy policy, we will update the "Last updated" dat
 
 ## Contact
 
-If you have questions about this privacy policy, please open an issue on the GitHub repository.
+If you have questions about this privacy policy, please open an issue on the [GitHub repository](https://github.com/2019-02-18/SnapCSS/issues).
