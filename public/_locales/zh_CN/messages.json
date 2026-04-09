@@ -116,5 +116,113 @@
   },
   "langZh": {
     "message": "中文"
+  },
+  "aiExplain": {
+    "message": "解读"
+  },
+  "aiOptimize": {
+    "message": "优化"
+  },
+  "aiResponsive": {
+    "message": "响应式"
+  },
+  "aiPlaceholder": {
+    "message": "选择一个分析操作或自由提问"
+  },
+  "aiInputPlaceholder": {
+    "message": "输入你的问题..."
+  },
+  "aiSend": {
+    "message": "发送"
+  },
+  "aiNotConfigured": {
+    "message": "请先在设置页面配置 AI API Key"
+  },
+  "aiSettings": {
+    "message": "AI 设置"
+  },
+  "aiProvider": {
+    "message": "AI 提供商"
+  },
+  "aiCustom": {
+    "message": "自定义"
+  },
+  "aiApiKey": {
+    "message": "API Key"
+  },
+  "aiEndpoint": {
+    "message": "自定义地址"
+  },
+  "aiModel": {
+    "message": "模型名称"
+  },
+  "aiTestConnection": {
+    "message": "测试连接"
+  },
+  "aiSave": {
+    "message": "保存 AI 设置"
+  },
+  "aiTesting": {
+    "message": "正在测试连接..."
+  },
+  "aiTestSuccess": {
+    "message": "连接成功！"
+  },
+  "aiTestFail": {
+    "message": "连接失败"
+  },
+  "aiPrivacyNote": {
+    "message": "API Key 仅存储在本地，CSS 数据仅在你主动点击分析时发送到你配置的 API 地址。"
+  },
+  "aiQwen": {
+    "message": "通义千问（百炼）"
+  },
+  "aiNotReady": {
+    "message": "AI 未配置 → 去设置"
+  },
+  "aiQuickStart": {
+    "message": "快速开始 — 获取免费 API Key"
+  },
+  "aiGeminiFree": {
+    "message": "免费额度 →"
+  },
+  "aiDeepseekFree": {
+    "message": "新用户免费 →"
+  },
+  "a11yContrast": {
+    "message": "颜色对比度"
+  },
+  "a11yForeground": {
+    "message": "前景色"
+  },
+  "a11yBackground": {
+    "message": "背景色"
+  },
+  "a11yPreviewText": {
+    "message": "Aa 示例文本预览"
+  },
+  "a11yFontSize": {
+    "message": "字号评估"
+  },
+  "a11yFontSizeValue": {
+    "message": "字号"
+  },
+  "a11yLargeText": {
+    "message": "大文本"
+  },
+  "a11yReadable": {
+    "message": "可读性"
+  },
+  "a11yYes": {
+    "message": "是"
+  },
+  "a11yNo": {
+    "message": "否"
+  },
+  "a11yNoElement": {
+    "message": "无可检查元素"
+  },
+  "a11yError": {
+    "message": "检查失败"
   }
 }

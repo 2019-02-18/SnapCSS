@@ -2,7 +2,7 @@
 
 ## Short Description (132 chars max)
 
-Hover any element, instantly see its CSS styles and copy with one click. A faster alternative to DevTools Inspect.
+Hover any element, see CSS styles, AI analysis & accessibility check. A smarter alternative to DevTools.
 
 ## Detailed Description
 
@@ -26,7 +26,10 @@ Just activate inspect mode, hover over an element, and click to see its full, cl
 • Bilingual — English and Chinese UI, switch anytime in settings
 • Keyboard Shortcut — Alt+C to toggle (customizable in Chrome settings)
 • SVG Support — Works with SVG elements too
-• Zero Dependencies — Works offline, no data sent anywhere
+• AI CSS Analysis — Explain, optimize, and get responsive suggestions for any element's CSS (BYO API Key)
+• Accessibility Check — WCAG contrast ratio, AA/AAA compliance, font readability assessment
+• Multi-Provider AI — Supports OpenAI, Claude, Gemini, and custom endpoints
+• Zero Dependencies — Core features work offline, AI features use your own API key
 
 **KEYBOARD SHORTCUTS:**
 • Alt+C — Toggle inspect mode
@@ -37,7 +40,7 @@ Just activate inspect mode, hover over an element, and click to see its full, cl
 • Escape — Exit inspect mode
 
 **PRIVACY:**
-SnapCSS runs 100% locally. No analytics, no tracking, no network requests. Your data never leaves your browser.
+SnapCSS runs 100% locally. No analytics, no tracking. AI features are optional and use your own API key — CSS data is only sent to your configured AI provider when you explicitly click an analysis action. No data is ever sent to SnapCSS servers.
 
 Built for frontend developers, UI designers, and anyone who works with CSS.
 
@@ -69,7 +72,7 @@ scripting is required to inject the inspection overlay (highlight box, info tag,
 
 ## 需要请求 storage 的理由（storage Permission Justification）
 
-storage is used to save local user preferences via chrome.storage.sync: copy format (Standard CSS / CSS Variables / Minified), theme (System / Light / Dark), and language (System / English / Chinese). Only simple key-value settings are stored. No personal data is collected or stored.
+storage is used to save local user preferences via chrome.storage.sync: copy format (Standard CSS / CSS Variables / Minified), theme (System / Light / Dark), and language (System / English / Chinese). chrome.storage.local is used to store optional AI configuration (provider selection, API key, endpoint, model name). Only simple key-value settings are stored. No personal data is collected or transmitted to SnapCSS servers.
 
 ## 需要请求 contextMenus 的理由（contextMenus Permission Justification）
 

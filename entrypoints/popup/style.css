@@ -179,6 +179,41 @@ body {
   border-color: var(--accent);
 }
 
+/* AI status */
+.ai-status-section {
+  padding: 6px 0 0;
+}
+
+.ai-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.ai-status-badge:hover {
+  border-color: var(--accent);
+}
+
+.ai-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef4444;
+  flex-shrink: 0;
+}
+
+.ai-status-badge.configured .ai-dot {
+  background: #22c55e;
+}
+
 .popup-footer {
   display: flex;
   justify-content: space-between;

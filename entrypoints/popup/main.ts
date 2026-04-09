@@ -1,6 +1,7 @@
 import { MSG, STORAGE_KEYS } from '@/lib/constants';
 import { t, applyI18n, setLanguage } from '@/lib/i18n';
 import type { ExtensionState, Language } from '@/lib/constants';
+import { AI_STORAGE_KEY } from '@/lib/ai/service';
 
 const toggleBtn = document.getElementById('toggle-btn') as HTMLButtonElement;
 const toggleIcon = document.getElementById('toggle-icon') as HTMLSpanElement;
@@ -97,10 +98,35 @@ function setupSettingsListeners() {
   });
 }
 
+async function checkAIStatus() {
+  const badge = document.getElementById('ai-status-badge');
+  const statusText = document.getElementById('ai-status-text');
+  if (!badge || !statusText) return;
+
+  try {
+    const result = await chrome.storage.local.get(AI_STORAGE_KEY);
+    const config = result[AI_STORAGE_KEY];
+    if (config?.apiKey) {
+      badge.classList.add('configured');
+      statusText.textContent = `AI: ${config.provider || 'configured'}`;
+    } else {
+      badge.classList.remove('configured');
+      statusText.textContent = t('aiNotReady');
+    }
+  } catch {
+    // ignore
+  }
+
+  badge.addEventListener('click', () => {
+    chrome.runtime.openOptionsPage();
+  });
+}
+
 async function initPopup() {
   applyI18n();
   await loadSettings();
   setupSettingsListeners();
+  checkAIStatus();
 
   const manifest = chrome.runtime.getManifest();
   const versionEl = document.getElementById('version-label');

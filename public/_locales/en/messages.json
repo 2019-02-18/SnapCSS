@@ -116,5 +116,113 @@
   },
   "langZh": {
     "message": "中文"
+  },
+  "aiExplain": {
+    "message": "Explain"
+  },
+  "aiOptimize": {
+    "message": "Optimize"
+  },
+  "aiResponsive": {
+    "message": "Responsive"
+  },
+  "aiPlaceholder": {
+    "message": "Choose an action or ask a question"
+  },
+  "aiInputPlaceholder": {
+    "message": "Ask a question..."
+  },
+  "aiSend": {
+    "message": "Send"
+  },
+  "aiNotConfigured": {
+    "message": "Please configure your AI API Key in Settings first"
+  },
+  "aiSettings": {
+    "message": "AI Settings"
+  },
+  "aiProvider": {
+    "message": "AI Provider"
+  },
+  "aiCustom": {
+    "message": "Custom"
+  },
+  "aiApiKey": {
+    "message": "API Key"
+  },
+  "aiEndpoint": {
+    "message": "Custom Endpoint"
+  },
+  "aiModel": {
+    "message": "Model Name"
+  },
+  "aiTestConnection": {
+    "message": "Test Connection"
+  },
+  "aiSave": {
+    "message": "Save AI Settings"
+  },
+  "aiTesting": {
+    "message": "Testing connection..."
+  },
+  "aiTestSuccess": {
+    "message": "Connection successful!"
+  },
+  "aiTestFail": {
+    "message": "Connection failed"
+  },
+  "aiPrivacyNote": {
+    "message": "API Key is stored locally only. CSS data is sent to your configured API endpoint only when you actively click an analysis action."
+  },
+  "aiQwen": {
+    "message": "Qwen (Alibaba)"
+  },
+  "aiNotReady": {
+    "message": "AI not configured → Settings"
+  },
+  "aiQuickStart": {
+    "message": "Quick Start — Get a Free API Key"
+  },
+  "aiGeminiFree": {
+    "message": "Free tier →"
+  },
+  "aiDeepseekFree": {
+    "message": "Free for new users →"
+  },
+  "a11yContrast": {
+    "message": "Color Contrast"
+  },
+  "a11yForeground": {
+    "message": "Foreground"
+  },
+  "a11yBackground": {
+    "message": "Background"
+  },
+  "a11yPreviewText": {
+    "message": "Aa Sample text preview"
+  },
+  "a11yFontSize": {
+    "message": "Font Size"
+  },
+  "a11yFontSizeValue": {
+    "message": "Size"
+  },
+  "a11yLargeText": {
+    "message": "Large Text"
+  },
+  "a11yReadable": {
+    "message": "Readable"
+  },
+  "a11yYes": {
+    "message": "Yes"
+  },
+  "a11yNo": {
+    "message": "No"
+  },
+  "a11yNoElement": {
+    "message": "No element to check"
+  },
+  "a11yError": {
+    "message": "Check failed"
   }
 }

@@ -1,6 +1,6 @@
 # Privacy Policy — SnapCSS
 
-**Last updated: March 25, 2026**
+**Last updated: April 9, 2026**
 
 ## Overview
 
@@ -8,14 +8,13 @@ SnapCSS is a Chrome browser extension that allows developers and designers to in
 
 ## Data Collection
 
-**SnapCSS does not collect, store, or transmit any personal data.**
+**SnapCSS does not collect, store, or transmit any personal data to our servers.**
 
 Specifically:
 
 - **No analytics** — We do not use any analytics or tracking services
-- **No network requests** — The extension makes zero network requests. It works entirely offline
 - **No user data storage** — We do not store browsing history, page content, or any form of personal information
-- **No third-party services** — We do not integrate with any external APIs or services
+- **No first-party servers** — SnapCSS does not operate any backend services
 
 ## Data Usage
 
@@ -23,7 +22,7 @@ The extension only accesses the following browser APIs for its core functionalit
 
 - **`activeTab`** — To inspect CSS styles on the currently active tab when you activate inspect mode
 - **`scripting`** — To inject the inspection overlay into web pages
-- **`storage`** — To save your local preferences (theme choice, copy format) using `chrome.storage.sync`. These preferences are stored locally in your browser profile and never transmitted to any server
+- **`storage`** — To save your local preferences (theme choice, copy format, language) using `chrome.storage.sync`, and AI configuration using `chrome.storage.local`. These preferences are stored locally in your browser profile and never transmitted to any SnapCSS server
 - **`contextMenus`** — To add an "Inspect with SnapCSS" option to the right-click menu
 
 ## Local Preferences
@@ -36,14 +35,34 @@ SnapCSS stores the following user preferences locally via Chrome's built-in stor
 
 These settings sync across your Chrome instances through Chrome's own sync mechanism if you have Chrome Sync enabled. SnapCSS has no access to or control over Chrome Sync.
 
+## AI Configuration (Optional)
+
+If you choose to use the AI analysis feature, SnapCSS stores the following in `chrome.storage.local` (local only, not synced):
+
+- AI provider selection (OpenAI / Claude / Gemini / Custom)
+- API Key (encrypted by Chrome's built-in storage)
+- Custom endpoint URL (if applicable)
+- Model name
+
+**Important:** Your API Key is stored only in your local browser profile and is never sent to any SnapCSS server.
+
 ## CSS Data
 
 When you inspect an element, SnapCSS reads its computed CSS styles using the browser's standard `window.getComputedStyle()` API. This CSS data:
 
 - Is only displayed in the floating panel on your screen
 - Is only copied to your clipboard when you explicitly click "Copy"
-- Is never stored, logged, or transmitted anywhere
 - Is discarded as soon as you close the panel or deactivate inspect mode
+
+### AI Analysis Data Flow
+
+When you use the AI analysis feature (optional, requires user-provided API Key):
+
+- CSS data is sent **only** to the AI provider endpoint you have configured (e.g., OpenAI, Claude, Gemini, or your custom endpoint)
+- Data is sent **only** when you explicitly click an AI action button (Explain, Optimize, Responsive) or submit a question
+- SnapCSS does not intercept, log, or store any data sent to or received from the AI provider
+- The AI provider's own privacy policy applies to data processed by their API
+- No CSS data is ever sent to any SnapCSS server
 
 ## Changes to This Policy
 

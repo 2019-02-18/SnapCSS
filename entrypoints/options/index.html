@@ -61,6 +61,56 @@
       <a href="#" id="shortcut-link" class="shortcut-link" data-i18n="shortcutKeyChange"></a>
     </section>
 
+    <section class="setting-group ai-settings">
+      <h2 data-i18n="aiSettings"></h2>
+      <div class="ai-field">
+        <label data-i18n="aiProvider"></label>
+        <select id="ai-provider">
+          <option value="openai">OpenAI</option>
+          <option value="claude">Claude</option>
+          <option value="gemini">Gemini</option>
+          <option value="deepseek">DeepSeek</option>
+          <option value="moonshot">Moonshot (Kimi)</option>
+          <option value="qwen" data-i18n="aiQwen"></option>
+          <option value="custom" data-i18n="aiCustom"></option>
+        </select>
+      </div>
+      <div class="ai-field">
+        <label data-i18n="aiApiKey"></label>
+        <div class="ai-key-wrapper">
+          <input type="password" id="ai-api-key" class="ai-input" placeholder="sk-..." autocomplete="off" />
+          <button type="button" id="ai-key-toggle" class="ai-key-toggle" title="Show/Hide">👁</button>
+        </div>
+      </div>
+      <div class="ai-field" id="ai-endpoint-group">
+        <label data-i18n="aiEndpoint"></label>
+        <input type="text" id="ai-endpoint" class="ai-input" placeholder="https://api.openai.com" />
+      </div>
+      <div class="ai-field">
+        <label data-i18n="aiModel"></label>
+        <input type="text" id="ai-model" class="ai-input" placeholder="gpt-4o-mini" />
+      </div>
+      <div class="ai-field ai-actions">
+        <button type="button" id="ai-test-btn" class="ai-test-btn" data-i18n="aiTestConnection"></button>
+        <button type="button" id="ai-save-btn" class="ai-save-btn" data-i18n="aiSave"></button>
+      </div>
+      <div class="ai-status" id="ai-status"></div>
+      <p class="ai-privacy-note" data-i18n="aiPrivacyNote"></p>
+      <div class="ai-quickstart">
+        <div class="ai-quickstart-title" data-i18n="aiQuickStart"></div>
+        <div class="ai-quickstart-links">
+          <a href="#" class="ai-quickstart-link" data-provider="gemini">
+            <span class="ai-qs-name">Google Gemini</span>
+            <span class="ai-qs-desc" data-i18n="aiGeminiFree"></span>
+          </a>
+          <a href="#" class="ai-quickstart-link" data-provider="deepseek">
+            <span class="ai-qs-name">DeepSeek</span>
+            <span class="ai-qs-desc" data-i18n="aiDeepseekFree"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <div class="save-status" id="save-status"></div>
   </div>
   <script src="./main.ts" type="module"></script>

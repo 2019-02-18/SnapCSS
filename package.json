@@ -1,6 +1,6 @@
 {
   "name": "snapcss",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Hover any element, instantly see its CSS, one-click copy.",
   "private": true,
   "type": "module",

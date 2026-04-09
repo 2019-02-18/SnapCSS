@@ -24,7 +24,10 @@ SnapCSS 是一款面向前端开发者和 UI 设计师的 Chrome 扩展。无需
 - **快捷键** — `Alt+C` 切换检查模式（可自定义）
 - **右键菜单** — 「用 SnapCSS 检查」快捷入口
 - **SVG 支持** — 正确处理 SVG 元素
-- **零依赖** — 纯前端实现，离线可用，不发送任何数据
+- **AI CSS 分析** — 解读、优化建议、响应式建议，自由对话（需自行配置 API Key）
+- **多 AI 提供商** — OpenAI / Claude / Gemini / DeepSeek / Kimi / 通义千问 / 自定义
+- **可访问性检查** — WCAG 对比度检测（AA/AAA）、字号可读性评估
+- **零依赖** — 核心功能离线可用，AI 功能使用用户自己的 API Key
 
 ## 安装
 
@@ -94,8 +97,14 @@ SnapCSS/
 │   └── options/            # 设置页面
 ├── lib/
 │   ├── inspector.ts        # DOM 检查 & 高亮
-│   ├── panel.ts            # 浮动 CSS 面板（Shadow DOM）
+│   ├── panel.ts            # 浮动 CSS 面板（Shadow DOM，含 AI/A11y 标签页）
 │   ├── css-parser.ts       # CSS 提取 & 清洗
+│   ├── a11y-checker.ts     # 可访问性检查（WCAG 对比度/字号）
+│   ├── ai/                 # AI 模块
+│   │   ├── service.ts      # AI 服务抽象层
+│   │   ├── prompts.ts      # 预设 Prompt 模板
+│   │   ├── index.ts        # 统一导出 & 初始化
+│   │   └── providers/      # OpenAI / Claude / Gemini 提供商
 │   ├── copy.ts             # 剪贴板操作
 │   ├── constants.ts        # 消息类型 & 存储键
 │   └── i18n.ts             # 国际化
@@ -108,7 +117,7 @@ SnapCSS/
 
 ## 隐私
 
-SnapCSS 完全在浏览器本地运行。不收集、不传输、不存储任何用户数据。所有 CSS 检查通过 DOM API 在本地完成。无分析、无追踪、无网络请求。
+SnapCSS 核心功能完全在浏览器本地运行。不收集、不传输任何用户数据到 SnapCSS 服务器。AI 功能使用用户自行配置的 API Key，CSS 数据仅在用户主动点击分析时发送到用户配置的 API 地址。无分析、无追踪。
 
 ## 许可证
 
@@ -142,7 +151,10 @@ SnapCSS is a Chrome extension for frontend developers and UI designers. It repla
 - **Keyboard Shortcut** — `Alt+C` to toggle inspect mode (customizable)
 - **Context Menu** — "Inspect with SnapCSS" right-click entry
 - **SVG Support** — Properly handles SVG elements
-- **Zero Dependencies** — Pure frontend, works offline, no data sent anywhere
+- **AI CSS Analysis** — Explain, optimize, responsive suggestions, free-form chat (BYO API Key)
+- **Multi-Provider AI** — OpenAI / Claude / Gemini / DeepSeek / Kimi / Qwen / Custom
+- **Accessibility Check** — WCAG contrast ratio (AA/AAA), font readability assessment
+- **Zero Dependencies** — Core features work offline; AI features use your own API key
 
 ## Install
 
@@ -195,7 +207,7 @@ Then load in Chrome:
 
 ## Privacy
 
-SnapCSS runs entirely in your browser. It does not collect, transmit, or store any user data. All CSS inspection happens locally via the DOM API. No analytics, no tracking, no network requests.
+SnapCSS core features run entirely in your browser. No user data is collected or sent to any SnapCSS server. The optional AI feature uses your own API key, and CSS data is only sent to your configured AI endpoint when you explicitly click an analysis action. No analytics, no tracking.
 
 ## License
 
